@@ -1,0 +1,24 @@
+
+
+<section class="top-letest-product-section">
+  <div class="container">
+<div class="row">
+<div  *ngFor="let item of WomenProductList" class="col-lg-3 col-sm-6">
+    <div class="product-item">
+      <div class="pi-pic">
+      <img src="assets/{{item.CategoryCard_Image}}" alt=""> 
+        <div class="pi-links">
+          <a (click)="OnAddCart(item)" class="add-card"><i class="flaticon-bag" ></i><span>ADD TO CART</span></a>
+          <a  (click)="Details(item)" class="add-card"><span>View Details</span></a>
+
+        </div>
+      </div>
+      <div class="pi-text">
+        <h6>{{item.CategoryCard_Price_Unit}}</h6>
+        <p>{{item.CategoryCard_Description}}</p>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
